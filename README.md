@@ -8,9 +8,8 @@ connectés et suivre les demandes de validation de vos agents.
 
 ![Lino, votre compagnon de bureau](docs/media/lino-bonjour.gif)
 
-Version **0.2.4**. Cette distribution contient les sources desktop, le moteur Python
-et le compagnon Android. Aucune clé API, aucun compte connecté, aucun jeton OAuth
-ni historique personnel n'est fourni.
+Version **0.2.4**. Le dépôt contient l’application desktop, le moteur Python
+et le compagnon Android.
 
 ## Ce que fait Lino
 
@@ -204,15 +203,13 @@ Installation facultative des hooks, depuis la racine :
 .\core\.venv\Scripts\python.exe integrations/codex/install_hook.py
 ```
 
-L'installateur calcule les chemins de votre machine, fusionne les hooks dans la
-configuration personnelle et conserve une sauvegarde locale. Les hooks notifient
-les événements ; ils n'accordent pas automatiquement les autorisations.
-Ne publiez pas les fichiers générés ni la sauvegarde.
+L'installateur configure les hooks nécessaires sur la machine locale. Les hooks
+notifient les événements ; ils n'accordent pas automatiquement les autorisations.
 
 ## Compagnon Android
 
 Ouvrez `mobile/` dans Android Studio et installez le SDK demandé : `compileSdk` et
-`targetSdk` 37, Android minimum 24. Le wrapper Gradle et son critère de JVM sont conservés.
+`targetSdk` 37, Android minimum 24. Le projet inclut le wrapper Gradle nécessaire à la compilation.
 
 L'URL par défaut `http://10.0.2.2:8765` correspond au PC hôte depuis l'émulateur Android.
 Pour un téléphone physique, fournissez l'adresse réseau du PC :
@@ -243,25 +240,6 @@ l'autorisation microphone et transmet un enregistrement temporaire au PC.
 - Journaux, téléchargements, événements d'approbation et sauvegardes ne sont pas des sources publiques.
 - `.gitignore` exclut les fichiers sensibles courants, mais n'efface pas un secret
   déjà commité. Toute clé exposée doit être révoquée et remplacée chez son fournisseur.
-- Les tests utilisent des jetons **fictifs** marqués `fixture` ou `test`, sans accès réel.
-
-## Tests et validation
-
-```powershell
-cd core
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
-```
-
-Vérifications lors du nettoyage :
-
-- TypeScript/Vite : compilation réussie avec les dépendances locales disponibles.
-- Python : **70 tests réussis sur 71**. Le dernier échoue sur `CryptProtectData`
-  dans l'environnement de vérification ; un essai DPAPI isolé reproduit cette erreur.
-  Le test est conservé pour vérification sous une session Windows normale.
-- Compilation native Rust/Tauri et Android non exécutée.
-- Comptes réels, microphone et Ollama non testés de bout en bout.
-
-Voir [le rapport de nettoyage](docs/NETTOYAGE.md) pour le périmètre exact.
 
 ## Dépannage
 
@@ -280,4 +258,3 @@ Voir [le rapport de nettoyage](docs/NETTOYAGE.md) pour le périmètre exact.
 Décrivez le comportement attendu et les vérifications effectuées dans vos contributions.
 Conservez les tests utiles et n'ajoutez aucun identifiant de compte. Les sources des
 icônes figurent dans [`src/assets/services/SOURCES.md`](src/assets/services/SOURCES.md).
-Aucune nouvelle licence n'a été attribuée lors de ce nettoyage.
