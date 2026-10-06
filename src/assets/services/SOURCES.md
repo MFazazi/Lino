@@ -1,0 +1,6 @@
+- gmail.png: https://www.gstatic.com/images/branding/product/2x/gmail_48dp.png
+- google-docs.ico: https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico
+- notion.svg: https://cdn.simpleicons.org/notion/000000
+- n8n.svg: https://cdn.simpleicons.org/n8n/EA4B71
+- stripe.svg: https://cdn.simpleicons.org/stripe/635BFF
+- github.svg: https://cdn.simpleicons.org/github/FFFFFF

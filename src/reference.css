@@ -1,0 +1,77 @@
+/* Lino — reference refinement. Native transparent surroundings reveal the desktop. */
+:root{font-family:Inter,"Segoe UI",sans-serif;color:#edf2fa;--muted:#93a3b9;--line:#aec9eb20}
+.petit{width:calc(100% - 40px);height:58px;margin:0 20px 10px;padding:3px 20px 6px 14px;border-radius:0 0 26px 26px;background:#070e19;grid-template-columns:46px minmax(0,1fr) 42px;gap:9px;box-shadow:inset 0 -1px 0 #c4dcff24,0 4px 9px #0006}
+.petit::before,.petit::after{width:20px;height:20px}.petit::before{left:-20px;background:radial-gradient(circle at 0 100%,transparent 20px,#070e19 20.6px)}.petit::after{right:-20px;background:radial-gradient(circle at 100% 100%,transparent 20px,#070e19 20.6px)}
+.petit .lino-creature--compact{width:46px;height:46px}.petit__title strong{font-size:16px;font-weight:600}.petit__title{gap:12px}.petit__content{gap:1px;min-width:0}.petit__line{max-width:172px;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.status-pill{height:23px;font-size:9px;padding:0 9px;border-radius:15px;background:#152235;white-space:nowrap;max-width:99px;overflow:hidden;text-overflow:ellipsis}.status-pill::before{box-shadow:0 0 6px #49da9b66}.status-pill--error::before{background:#ff7884}.status-pill--approval::before{background:#ffc46f}.petit__signal{gap:3px;height:34px}.petit__signal i{width:2px}.petit__signal i:nth-child(1){height:6px}.petit__signal i:nth-child(2){height:13px}.petit__signal i:nth-child(3){height:22px}.petit__signal i:nth-child(4){height:31px}.petit__signal i:nth-child(5){height:22px}.petit__signal i:nth-child(6){height:14px}.petit__signal i:nth-child(7){height:6px}
+.island-shell{height:100%;padding:94px 24px 14px;position:relative}.expanded-notch{width:360px;height:68px;position:absolute;left:50%;top:0;transform:translateX(-50%)}
+.island{border:1px solid #a9c2e43d;border-radius:24px;background:rgba(18,28,42,.96);box-shadow:inset 0 1px 0 #d8e8ff19,0 7px 18px #0005;overflow:hidden;mask-image:radial-gradient(circle at 50% -10px,transparent 26px,#000 26.7px);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px)}.island::before,.island::after{display:none}
+.island-header{height:72px;padding:12px 24px 8px;gap:16px;background:#ffffff02;border-bottom:1px solid #a9c2e410}.island-header .lino-wordmark{width:auto;height:auto;display:block;padding:0;border-radius:0;background:none;box-shadow:none;font-size:22px;font-weight:650;letter-spacing:-.04em;color:#f0f3fc;margin-right:auto}.island-header__left{gap:5px}.island-header__left button{height:36px;padding:0 12px;font-size:11px;gap:9px;color:#99aabe;border-radius:15px}.island-header button.active{background:#2a405e;box-shadow:inset 0 0 0 1px #7296c53c,inset 0 1px 8px #abcaff13,0 3px 10px #03132222;color:#ecf4ff}.island-header__left button.active svg{color:#9ec9ff}.island-header__right{gap:0;padding-left:12px;border-left:1px solid #b0c4e318}.island-header__right button{width:33px;height:32px;border-radius:10px;color:#a6b6cc}.island-header button:hover{background:#ffffff0e;color:#fff}
+.island-body{height:calc(100% - 72px);padding:12px 28px 20px;border-radius:0 0 24px 24px;overflow:auto;scrollbar-width:thin;scrollbar-color:#536a89 transparent}
+.welcome{height:100%;min-height:380px;display:grid;grid-template-rows:minmax(170px,1fr) 143px 50px;gap:16px}.welcome-hero{position:relative;display:flex;align-items:center;min-height:0}.welcome-art{position:absolute;top:-12px;bottom:0;left:-28px;width:59%;background:url('./assets/lino-forest.png') center/cover no-repeat;mask-image:linear-gradient(to right,#000 70%,transparent),linear-gradient(to bottom,transparent,#000 14%,#000 80%,transparent);mask-composite:intersect}.welcome-greeting{position:relative;margin-left:50%;padding-left:6px;padding-bottom:7px}.welcome-greeting h1{font-size:34px;line-height:1.2;font-weight:600;letter-spacing:-.035em;margin:0 0 9px;color:#f4f5fc}.welcome-greeting p{font-size:15px;line-height:1.5;color:#9babc2;margin:0;white-space:nowrap}
+.welcome-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.welcome-shortcut{position:relative;display:flex;flex-direction:column;align-items:flex-start;text-align:left;background:#b0c9ee09;border:1px solid #b0c9ee26;border-radius:15px;padding:14px 14px 12px;color:#e8edf6;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}.welcome-shortcut:hover{background:#b0c9ee16;border-color:#9ebce558;transform:translateY(-2px)}.shortcut-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;margin-bottom:9px;background:#31547d;color:#a5d2ff}.welcome-shortcut--purple .shortcut-icon{background:#4a436b;color:#d4b7fa}.welcome-shortcut--gold .shortcut-icon{background:#61543c;color:#f2d48a}.welcome-shortcut--green .shortcut-icon{background:#2f635c;color:#a4edcf}.shortcut-title{font-size:12px;line-height:1.35;font-weight:500;max-width:140px;min-height:32px;padding-right:4px}.shortcut-description{font-size:10px;line-height:1.45;color:#8f9fb6;margin-top:6px;max-width:160px;letter-spacing:.015em}.shortcut-arrow{position:absolute;right:13px;top:70px;color:#c5d6e9}
+.composer-wrap{min-width:0;position:relative}.lino-composer{height:50px;width:100%;border:1px solid #b5cbea35;border-radius:28px;display:flex;align-items:center;gap:9px;padding:6px 8px 6px 12px;background:#0e17245e;box-shadow:inset 0 1px 0 #ffffff06}.lino-composer:focus-within{border-color:#83b6f591;box-shadow:0 0 0 2px #78b3ff0c}.lino-composer input:not([type=file]){flex:1;min-width:0;border:0;outline:0;color:#edf4ff;background:none;font:inherit;font-size:12px;letter-spacing:.01em}.lino-composer input::placeholder{color:#8090a8}.lino-composer button{display:grid;place-items:center;border:0;background:none;color:#97abc5;width:32px;height:32px;border-radius:50%;cursor:pointer;flex-shrink:0}.lino-composer .composer-attach{border-radius:0;border-right:1px solid #acc3e11a;width:33px;margin-right:5px;padding-right:10px}.lino-composer .composer-mic{color:#8ebdff}.lino-composer .composer-send{background:#365986;color:#d0e6ff}.lino-composer button:disabled{opacity:.38;cursor:default}.lino-composer.is-recording{border-color:#fa9397}.lino-composer.is-recording .composer-mic{color:#fa9397}.composer-error{position:absolute;bottom:54px;left:0;right:0;margin:0;background:#35232b;border:1px solid #e5a4ac44;border-radius:10px;color:#ffccd2;padding:8px 12px;font-size:12px;z-index:4}
+.chat-card{height:100%;min-height:300px;grid-template-rows:28px minmax(0,1fr) 50px;padding:14px 16px;background:#0c152027;border-color:#a8c2e21a}.chat-card__messages{overflow:auto;white-space:pre-wrap}.chat-card__assistant>div{overflow-wrap:anywhere}.chat-card__model{background:#ffffff08}.connections-view{padding:5px 2px 14px}.connections-heading h2{font-size:23px}.mcp-tile,.personal-setting,.settings-card--embedded .setting-row,.n8n-connection{border-color:#b1caec20;background:#a7c5ea06}.personal-setting textarea{resize:vertical}.settings-list{gap:7px}.payment-banner{height:auto;min-height:44px}.island-body:has(.payment-banner)>.welcome{height:calc(100% - 54px)}
+@media(max-width:800px){.island-shell{padding-left:14px;padding-right:14px}.island-header{padding-left:20px;padding-right:16px;gap:8px}.island-header__left button span{display:none}.island-header__left button{width:36px;padding:0;justify-content:center}.welcome-greeting h1{font-size:29px}.welcome-greeting p{font-size:12px;white-space:normal}.island-body{padding-left:20px;padding-right:20px}.shortcut-title{font-size:11px;padding-right:12px}.shortcut-description{font-size:9px}.welcome-shortcut{padding:11px}.shortcut-arrow{right:7px}}
+@media(max-width:560px){.island-header .lino-wordmark{font-size:18px}.island-header__right{padding-left:5px}.island-header__right button{width:27px}.island-header__left{gap:1px}.island-header__left button{width:30px}.welcome{grid-template-rows:180px auto 50px;min-height:560px}.welcome-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}.welcome-shortcut{min-height:135px}.welcome-art{width:70%}.welcome-greeting{margin-left:48%}.welcome-greeting h1{font-size:25px}.expanded-notch{width:min(360px,100%)}.personal-setting form{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.welcome-shortcut{transition:none}.welcome-shortcut:hover{transform:none}}
+.welcome-art{background-size:170% auto;background-position:2% 56%}.petit .lino-creature__lid,.petit .lino-creature__mouth{display:none}
+
+/* Shared notch shape and coordinated native-window transitions. */
+.petit{height:38px;margin-bottom:8px;padding:0 16px 2px 10px;grid-template-columns:34px minmax(0,1fr) 42px;border-radius:0 0 19px 19px}
+.petit .lino-creature--compact{width:34px;height:34px}
+.petit__signal{height:28px;transform:scaleY(.68)}
+.petit .status-pill{height:19px;font-size:8px;padding:0 7px}
+.petit__title strong{font-size:14px}
+.petit__line{font-size:8px;line-height:10px}
+.petit__title{gap:8px}
+.island-shell{padding:0 24px 14px}
+.island{background:#121c2a;border:0;border-radius:0 0 30px 30px;mask-image:none;overflow:visible;backdrop-filter:none;-webkit-backdrop-filter:none;transform-origin:50% 0}
+.island::before,.island::after{display:block;width:24px;height:24px}
+.island::before{left:-24px;background:radial-gradient(circle at 0 100%,transparent 24px,#121c2a 24.6px)}
+.island::after{right:-24px;background:radial-gradient(circle at 100% 100%,transparent 24px,#121c2a 24.6px)}
+.island-body{border-radius:0 0 30px 30px}
+/* The shell reveals from the compact silhouette without stretching its contents. */
+.island-shell{will-change:clip-path}
+.island-shell--open .island,.island-shell--closing .island{animation:none}
+.island-shell .island-header,.island-shell .island-body{opacity:0;transform:translateY(-8px)}
+.island-shell--closing{pointer-events:none}
+.welcome-art{display:grid;place-items:center;background:radial-gradient(ellipse at 50% 65%,#89bead22,transparent 65%);mask-image:none;overflow:visible}
+.welcome-art>.lino-creature{width:clamp(130px,18vw,170px);height:clamp(130px,18vw,170px)}
+.lino-creature__face{position:absolute;inset:0;transform:translate(var(--look-x,0px),var(--look-y,0px));transition:transform .16s ease-out}
+.lino-creature:focus-visible{outline:2px solid #9ec9ff;outline-offset:3px;border-radius:30%}
+.lino-creature__lid{background:linear-gradient(135deg,#f6dfcf,#f4e5d9);box-shadow:none}
+.lino-creature__lid--left{left:35%;top:49%;width:12%;height:13%;transform:rotate(-10deg) scaleY(0)}
+.lino-creature__lid--right{left:70.5%;top:42%;width:10%;height:13%;transform:rotate(-16deg) scaleY(0)}
+.lino-creature.is-blinking .lino-creature__lid--left{transform:rotate(-10deg) scaleY(1)}
+.lino-creature.is-blinking .lino-creature__lid--right{transform:rotate(-16deg) scaleY(1)}
+.petit .lino-creature__lid{display:block}
+@keyframes creatureIdle{0%,100%{transform:translateY(0) rotate(0)}30%{transform:translateY(-5px) rotate(-2deg) scale(1.025)}65%{transform:translateY(-2px) rotate(2deg)}}
+.lino-creature.is-booped .lino-creature__body{animation:creatureBoop .36s cubic-bezier(.2,.9,.3,1)}
+.service-icon{display:inline-grid;place-items:center;flex-shrink:0;width:34px;height:34px;border-radius:10px;background:#a9c2e418;color:#b7cdec}
+.service-icon svg{width:22px;height:22px}
+.service-icon--gmail,.service-icon--notion{background:#fff}
+.service-icon--docs{background:#4285f422;color:#78abff}
+.service-icon--n8n{background:#ea4b7120;color:#ff7894}
+.service-icon--stripe{background:#635bff2b;color:#a49fff}
+.service-icon--web{background:#44c9a320;color:#80e2c6}
+.service-icon--phone{background:#7bacf520;color:#a1c7ff}
+.personal-setting h3{display:flex;align-items:center;gap:10px}
+@media(prefers-reduced-motion:reduce){.island-shell .island,.lino-creature *,.petit__signal i{animation:none!important;transition:none!important}.lino-creature__face{transform:none}.island-shell--closing .island{opacity:0}}
+
+/* Compact expanded layout: native height 480px, including the shadow. */
+.island-header{height:56px;padding-top:7px;padding-bottom:7px}
+.island-body{height:calc(100% - 56px);padding-top:8px;padding-bottom:12px}
+.welcome{min-height:0;grid-template-rows:minmax(140px,1fr) 122px 44px;gap:10px}
+.welcome-art{top:0}
+.welcome-greeting h1{font-size:29px;margin-bottom:6px}
+.welcome-greeting p{font-size:13px;white-space:normal}
+.welcome-shortcut{padding:10px 12px}
+.shortcut-icon{width:28px;height:28px;margin-bottom:6px}
+.shortcut-icon svg{width:18px;height:18px}
+.shortcut-description{margin-top:3px}
+.shortcut-arrow{top:56px}
+.lino-composer{height:44px}
+.chat-card{min-height:0;grid-template-rows:28px minmax(0,1fr) 44px}
+.service-icon img{width:23px;height:23px;object-fit:contain;display:block}
+.service-icon--stripe img,.service-icon--n8n img{width:26px;height:26px}
+@media(max-width:560px){.welcome{min-height:450px;grid-template-rows:130px auto 44px}.welcome-shortcut{min-height:120px}}

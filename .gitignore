@@ -1,0 +1,45 @@
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+**/google_credentials.json
+**/google_token.json
+**/google_oauth.json
+**/credentials*.json
+**/token*.json
+*.dpapi
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+**/hooks.json
+**/hooks-before-lino.json
+# Dependencies, generated files and runtime data
+node_modules/
+dist/
+target/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+.pytest_cache/
+.runtime/
+.gradle/
+.kotlin/
+build/
+src-tauri/gen/
+*.apk
+*.aab
+*.log
+*.sqlite*
+*.db
+# Per-machine settings
+.idea/
+.vscode/
+local.properties
+.DS_Store
+Thumbs.db
+desktop.ini
